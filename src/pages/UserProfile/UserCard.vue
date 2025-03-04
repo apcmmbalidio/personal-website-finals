@@ -11,17 +11,16 @@
           alt="..."
         />
         <h4 class="title">
-          Chet Faker
+          Maria Sophea Balidio
           <br />
-          <a href="#">
-            <small>@chetfaker</small>
+          <a href="https://github.com/apcmmbalidio">
+            <small>@apcmmbalidio</small>
           </a>
         </h4>
       </div>
       <p class="description text-center">
         "I like the way you work it
-        <br />
-        No diggity <br />
+        No diggity
         I wanna bag it up"
       </p>
     </div>
@@ -44,37 +43,5 @@
   </card>
 </template>
 <script>
-export default {
-  data() {
-    return {
-      details: [
-        {
-          title: "12",
-          subTitle: "Files",
-        },
-        {
-          title: "2GB",
-          subTitle: "Used",
-        },
-        {
-          title: "24,6$",
-          subTitle: "Spent",
-        },
-      ],
-    };
-  },
-  methods: {
-    getClasses(index) {
-      var remainder = index % 3;
-      if (remainder === 0) {
-        return "col-lg-3 offset-lg-1";
-      } else if (remainder === 2) {
-        return "col-lg-4";
-      } else {
-        return "col-lg-3";
-      }
-    },
-  },
-};
 </script>
 <style></style>

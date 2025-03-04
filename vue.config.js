@@ -1,3 +1,7 @@
 module.exports = {
-  lintOnSave: false,
+  devServer: {
+    client: {
+      webSocketURL: 'wss://0.0.0.0/'
+    }
+  }
 };

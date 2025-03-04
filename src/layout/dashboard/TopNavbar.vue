@@ -18,7 +18,7 @@
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="ti-panel"></i>
-              <p>Stats</p>
+              <p>User Profile</p>
             </a>
           </li>
           <drop-down

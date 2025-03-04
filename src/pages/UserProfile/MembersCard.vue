@@ -1,30 +1,13 @@
 <template>
-  <card class="card" :title="title">
+  <card class="card" title="Education List">
     <div>
-      <ul class="list-unstyled team-members">
-        <li>
-          <div class="row" v-for="member in members" :key="member.name">
-            <div class="col-3">
-              <div class="avatar">
-                <img
-                  :src="member.image"
-                  alt="Circle Image"
-                  class="rounded img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-6">
-              {{ member.name }}
+      <ul class="list-unstyled education-list">
+        <li v-for="education in educationList" :key="education.level">
+          <div class="row">
+            <div class="col-12">
+              <strong>{{ education.level }}</strong>
               <br />
-              <span :class="getStatusClass(member.status)">
-                <small>{{ member.status }}</small>
-              </span>
-            </div>
-
-            <div class="col-3">
-              <p-button type="success" outline icon>
-                <i class="fa fa-envelope"></i>
-              </p-button>
+              <small>{{ education.institution }}</small>
             </div>
           </div>
         </li>
@@ -32,44 +15,28 @@
     </div>
   </card>
 </template>
+
 <script>
 export default {
   data() {
     return {
-      title: "Team members",
-      members: [
+      educationList: [
         {
-          image: require("@/assets/img/faces/face-0.jpg"),
-          name: "Dj Khaled",
-          status: "Offline",
+          level: "Primary Education",
+          institution: "Rancho Imperial Learning Center",
         },
         {
-          image: require("@/assets/img/faces/face-1.jpg"),
-          name: "Creative Tim",
-          status: "Available",
+          level: "Secondary Education",
+          institution: "Tagaytay City Science National High School - ISHS",
         },
         {
-          image: require("@/assets/img/faces/face-1.jpg"),
-          name: "Flume",
-          status: "Busy",
+          level: "Tertiary Education",
+          institution: "Asia Pacific College",
         },
       ],
     };
   },
-  methods: {
-    getStatusClass(status) {
-      switch (status) {
-        case "Offline":
-          return "text-muted";
-        case "Available":
-          return "text-success";
-        case "Busy":
-          return "text-danger";
-        default:
-          return "text-success";
-      }
-    },
-  },
 };
 </script>
+
 <style></style>
